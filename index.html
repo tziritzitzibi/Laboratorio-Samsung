@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script> 
+    <title>Formulario laboratorio</title>
+</head>
+<body>
+    <div class="form_box">
+    <form name="createaccount">
+        <h1> Create Account </h1>
+        <!--Input para nombre-->
+        <div class="input_button">
+            <h3 id="Nombre">Nombre</h3>
+            <input type="text" name="nombre" id="nombre"  class="input" autocomplete="off" onchange="return submitNombre()">
+            <span id="error1"></span>
+        </div>
+        <!--Input para email-->
+        <div class="input_button">
+            <h3 id="Email">Email</h3>
+            <input type="email" name="email"  id="email" value="" class="input" autocomplete="off" onchange="return submitEmail()">
+            <span id="error2"></span>
+        </div>
+        <!--Input para password-->
+        <div class="input_button">
+            <h3 id="Password">Clave</h3> 
+            <input type="password" name="password"  id="password" value="" class="input" minlength="8" autocomplete="off" onchange="return submitPassword()">
+            <span id="error3"></span> 
+        </div>
+        <!--Input para validar password-->
+        <div class="input_button">
+            <h3 id="Confirmar">Confirme su clave</h3> 
+            <input type="password" name="confirm" id="confirm" value="" class="input" autocomplete="off" onchange="return validarPassword()">
+            <span id="error4"></span>
+        </div>
+        <!--Boton de submit-->
+         <input type="submit" id="submit" value="ENVIAR" onclick="return submitNombre(), submitEmail(), submitPassword(), validarPassword(), submitFormulario()">
+    </form>
+    </div>
+</body>
+</html>
