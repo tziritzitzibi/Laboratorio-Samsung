@@ -4,7 +4,7 @@ function submitNombre(){
 	const reglasNombre = /^[A-Za-z\s]+$/;
 	const error1 = document.getElementById('error1');
 
-	if(elementoNombre.value == 0){
+	if(elementoNombre.value === 0){
 		error1.innerHTML = "Rellene este campo";
 		elementoNombre.classList.add("error");
 		elementoNombre.classList.add("imagenError");
@@ -28,7 +28,7 @@ function submitEmail(){
 	const reglasEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 	const error2 = document.getElementById('error2');
 
-	if(elementoEmail.value == 0){
+	if(elementoEmail.value === 0){
 		error2.innerHTML = "Rellene este campo";
 		elementoEmail.classList.add("error");
 		elementoEmail.classList.add("imagenError");
@@ -53,7 +53,7 @@ function submitPassword(){
 	const reglasPassword = /^[\s\S]{8,}$/;
 	const error3 = document.getElementById('error3');
 
-	if(password.value == 0){
+	if(password.value === 0){
 		error3.innerHTML = "Rellene este campo";
 		password.classList.add("error");
 		password.classList.add("imagenError");
@@ -77,7 +77,7 @@ function validarPassword(){
 	const confirmarPassword = document.getElementById('confirm');
 	const error4 = document.getElementById('error4');
 
-	if(confirmarPassword.value == 0){
+	if(confirmarPassword.value === 0){
 		error4.innerHTML = "Rellene este campo";
 		confirmarPassword.classList.add("error");
 		confirmarPassword.classList.add("imagenError");
